@@ -18,6 +18,9 @@ expo-env.d.ts
 *.key
 *.mobileprovision
 
+# VScode
+.vscode
+
 # Metro
 .metro-health-check*
 
