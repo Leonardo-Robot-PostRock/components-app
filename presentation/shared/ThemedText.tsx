@@ -12,7 +12,7 @@ const ThemedText = ({ className, type, ...rest }: Props) => {
     return (
         <Text
             className={[
-                'mt-10 text-3xl text-light-text dark:text-dark-text',
+                'text-3xl text-light-text dark:text-dark-text',
                 type === 'normal' ? 'font-normal' : undefined,
                 type === 'h1' ? 'text-3xl' : undefined,
                 type === 'h2' ? 'text-xl' : undefined,

@@ -1,13 +1,16 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
+import { Stack } from 'expo-router';
+
+import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
+
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import 'react-native-reanimated';
-import '../global.css';
 
 import { allRoutes } from '@/constants/Routes';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { useThemeColor } from '@/hooks/useThemeColor';
-import { Stack } from 'expo-router';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
+
+import '../global.css';
 
 export default function RootLayout() {
   const backgroundColor = useThemeColor({}, 'background');
