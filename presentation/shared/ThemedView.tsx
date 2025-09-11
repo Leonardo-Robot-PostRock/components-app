@@ -3,7 +3,7 @@ import { View, ViewProps } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 interface Props extends ViewProps {
-    className?: 'string';
+    className?: string;
     margin?: boolean;
     safe?: boolean;
     bgColor?: string;
