@@ -3,12 +3,20 @@ import React from 'react';
 
 const ModalLayout = () => {
   return (
-    <Stack  screenOptions={{
-      headerShown:false
-    }}>
+    <Stack
+      screenOptions={{
+        headerShown: false
+      }}
+    >
       <Stack.Screen name="index" />
       <Stack.Screen
         name="modal-window"
+        options={{
+          presentation: 'fullScreenModal',
+        }}
+      />
+      <Stack.Screen
+        name="modal-window-2"
         options={{
           presentation: 'modal',
         }}

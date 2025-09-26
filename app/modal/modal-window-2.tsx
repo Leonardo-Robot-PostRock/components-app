@@ -10,12 +10,8 @@ const ModalScreen = () => {
         <ThemedView className='justify-center items-center flex-1' bgColor='#A52182'>
             <ThemedText className='text-dark-text'>Hola, soy un modal</ThemedText>
 
-            <ThemedButton 
-                onPress={() => router.push('/modal/modal-window-2')}
-                className='my-4 text-dark-text'
-            >Otro modal</ThemedButton>
-
             <ThemedButton
+                className='mt-4'
                 onPress={() => router.dismiss()}
             >Cerrar</ThemedButton>
 
