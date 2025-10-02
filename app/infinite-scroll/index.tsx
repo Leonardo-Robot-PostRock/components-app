@@ -1,11 +1,13 @@
-import ThemedText from '@/presentation/shared/ThemedText';
+import { useThemeColor } from '@/hooks/useThemeColor';
 import ThemedView from '@/presentation/shared/ThemedView';
 import { useState } from 'react';
-import { Image } from 'react-native';
+import { ActivityIndicator, Image, View } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 
 const InfiniteScrollScreen = () => {
-  const [numbers, setNumbers] = useState([0, 1, 2, 3, 4, 5])
+  const [numbers, setNumbers] = useState([0, 1, 2, 3, 4, 5]);
+
+  const primaryColor = useThemeColor({}, 'primary')
 
   const loadMore = () => {
     const newArray = Array.from({ length: 5 }, (_, i) => numbers.length + i)
@@ -23,11 +25,17 @@ const InfiniteScrollScreen = () => {
         renderItem={({ item }) => <ListItems number={item} />}
         onEndReached={loadMore}
         onEndReachedThreshold={0.6}
+        ListFooterComponent={() => (
+          <View style={{ height: 150, justifyContent: 'center' }}>
+            <ActivityIndicator size={40} color={primaryColor} />
+          </View>
+        )}
       />
 
     </ThemedView>
   );
 };
+
 export default InfiniteScrollScreen;
 
 interface ListItemProps {
