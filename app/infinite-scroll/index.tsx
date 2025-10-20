@@ -1,4 +1,5 @@
 import { useThemeColor } from '@/hooks/useThemeColor';
+import FadeInImage from '@/presentation/images/FadeInImage';
 import ThemedView from '@/presentation/shared/ThemedView';
 import { useState } from 'react';
 import { ActivityIndicator, Image, View } from 'react-native';
@@ -44,12 +45,20 @@ interface ListItemProps {
 
 const ListItems = ({ number }: ListItemProps) => {
   return (
-    <Image
-      source={{ uri: `https://picsum.photos/id/${number}/500/400` }}
+
+    <FadeInImage
+      uri={`https://picsum.photos/id/${number}/500/400`}
       style={{
         height: 400,
         width: '100%'
       }}
     />
+    // <Image
+    //   source={{ uri: }}
+    //   style={{
+    //     height: 400,
+    //     width: '100%'
+    //   }}
+    // />
   )
 }
