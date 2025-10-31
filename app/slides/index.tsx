@@ -79,7 +79,7 @@ const SlidesScreen = () => {
         (currentSlideIndex === items.length - 1) ?
 
           <ThemedButton
-            className='absolute bottom-10 right-5 w-[150px]'
+            className='absolute bottom-10 right-5 w-[170px]'
             onPress={() => router.dismiss()}
           >
             Finalizar
