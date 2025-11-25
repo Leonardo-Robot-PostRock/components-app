@@ -7,7 +7,7 @@ import { useState } from 'react';
 
 const ThemesScreen = () => {
   // const { colorScheme, setColorScheme } = useColorScheme();
-  const { toggleTheme, currentTheme, setSystemTheme,isSystemTheme } = useThemeChangerContext();
+  const { toggleTheme, currentTheme, setSystemTheme, isSystemTheme } = useThemeChangerContext();
 
   const [darkModeSettings, setDarkModeSettings] = useState({
     darkMode: currentTheme === 'dark',
